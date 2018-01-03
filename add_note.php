@@ -51,7 +51,7 @@ try {
   $sql = "INSERT INTO Note
           (userID, bookName, User_userID, noteAddress, textAddress)
           VALUES
-          ('$userid', '$bookname', '$userid', '$noteAdd', '$textAdd')";
+          ('$userID', '$bookname', '$userID', '$noteAdd', '$textAdd')";
   $conn->exec($sql);
   $noteID = $conn->lastInsertId();  
 } catch (PDOException $e){
