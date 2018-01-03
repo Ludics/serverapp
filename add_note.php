@@ -11,13 +11,16 @@ $host="localhost";
 $user="root";
 $pass="ludics";
 $dbName="Notes";
-$dir="/var/www/html/app/content/";
+$noteDir="./content/note/";
+$textDir="./content/text/";
 
-$notenum = count(scandir($dir."note/"))-2;
-$textnum = count(scandir($dir."text/"))-2;
+$notenum = count(scandir($noteDir))-2;
+$textnum = count(scandir($textDir))-2;
 
 $noteAdd = $dir."note/".$notenum.".txt";
 $textAdd = $dir."note/".$textnum.".txt";
+myLOG($noteAdd);
+myLOG($textAdd);
 //将笔记与原文分别保存
 
 //存笔记
@@ -32,7 +35,7 @@ flock($fp,LOCK_UN);
 fclose($fp);
 
 //存原文
-$fp=fopen($textAdd,'w');
+$fp=fopen($textAdd, 'w');
 flock($fp,LOCK_EX);
 if(!$fp){
     myLOG("Saving failed.");
