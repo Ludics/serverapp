@@ -10,7 +10,7 @@ myLOG($userID.$note.$text.$bookname);
 $host="localhost";
 $user="root";
 $pass="ludics";
-$dbName="Notes";
+$dbname="Notes";
 $noteDir="/var/www/html/app/content/note/";
 $textDir="/var/www/html/app/content/text/";
 
