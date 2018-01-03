@@ -46,7 +46,7 @@ fwrite($fp,$text);
 fclose($fp);
 
 try {
-  $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+  $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "INSERT INTO Note
           (userID, bookName, User_userID, noteAddress, textAddress)
