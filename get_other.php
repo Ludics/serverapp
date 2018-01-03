@@ -30,12 +30,15 @@ $conn = null;
 $note = file_get_contents($result["noteAddress"]);
 $text = file_get_contents($result["textAddress"]);
 
-$result["note"] = $note;
-$result["text"] = $text;
+$obj->userID = $result["userID"];
+$obj->noteID = $result["noteID"];
+$obj->bookName = $result["bookName"];
+$obj->createTime = $result["createTime"];
+$obj->totalLikes = $result["totalLikes"];
+$obj->totalComments = $result["totalComments"];
+$obj->note = $note;
+$obj->text = $text;
 
-$result["noteAddress"] = "";
-$result["textAddress"] = "";
-
-echo json_encode($result);
+echo json_encode($obj);
 
 ?>
