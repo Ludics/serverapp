@@ -6,13 +6,13 @@ $userID = $obj->userID;
 $note = $obj->note;
 $text = $obj->text;
 $bookname = $obj->bookname;
-
+myLOG($userID.$note.$text.$bookname);
 $host="localhost";
 $user="root";
 $pass="ludics";
 $dbName="Notes";
-$noteDir="./content/note/";
-$textDir="./content/text/";
+$noteDir="/var/www/html/app/content/note/";
+$textDir="/var/www/html/app/content/text/";
 
 $notenum = count(scandir($noteDir))-2;
 $textnum = count(scandir($textDir))-2;
@@ -51,7 +51,7 @@ try {
   $sql = "INSERT INTO Note
           (userID, bookName, User_userID, noteAddress, textAddress)
           VALUES
-          ('$userid', '$bookName', '$userid', '$noteAdd', '$textAdd')";
+          ('$userid', '$bookname', '$userid', '$noteAdd', '$textAdd')";
   $conn->exec($sql);
   $noteID = $conn->lastInsertId();  
 } catch (PDOException $e){
