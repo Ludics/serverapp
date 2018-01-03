@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
-$result = file_get_contents('php://input');
-$obj = json_decode($result);
+$result_0 = file_get_contents('php://input');
+$obj = json_decode($result_0);
 $times = $obj->times;
 
 myLOG("Get other notes ".$times);

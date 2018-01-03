@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
-$result = file_get_contents('php://input');
-$obj = json_decode($result);
+$result_0 = file_get_contents('php://input');
+$obj = json_decode($result_0);
 $times = $obj->times;
 $userID = $obj->userID;
 
@@ -31,7 +31,7 @@ $conn = null;
 $note = file_get_contents($result["noteAddress"]);
 $text = file_get_contents($result["textAddress"]);
 
-$obj->userID = $result["userID"];
+// $obj->userID = $result["userID"];
 $obj->noteID = $result["noteID"];
 $obj->bookName = $result["bookName"];
 $obj->createTime = $result["createTime"];
