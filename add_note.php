@@ -17,8 +17,8 @@ $textDir="./content/text/";
 $notenum = count(scandir($noteDir))-2;
 $textnum = count(scandir($textDir))-2;
 
-$noteAdd = $dir."note/".$notenum.".txt";
-$textAdd = $dir."note/".$textnum.".txt";
+$noteAdd = $noteDir.$notenum.".txt";
+$textAdd = $textDir.$textnum.".txt";
 myLOG($noteAdd);
 myLOG($textAdd);
 //将笔记与原文分别保存
