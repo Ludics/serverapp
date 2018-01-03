@@ -5,7 +5,7 @@ $obj = json_decode($result);
 $times = $obj->times;
 $userID = $obj->userID;
 
-myLOG("Get other notes ".$times);
+myLOG("Get self notes ".userID." ".$times);
 $host="localhost";
 $user="root";
 $pass="ludics";
@@ -14,7 +14,7 @@ $dbname="Notes";
 try {
   $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = "SELECT * FROM Note ORDER BY createTime DESC LIMIT $times";
+  $sql = "SELECT * FROM Note ORDER BY createTime DESC WHERE userID = '$userID'";
   $res = $conn->query($sql); 
   $row = $res->fetchALL();
   $result = $row[$times-1];
