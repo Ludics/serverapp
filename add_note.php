@@ -60,13 +60,14 @@ fwrite($fp,$text);
 flock($fp,LOCK_UN);
 fclose($fp);
 
+$noteID = intval($noteID);
 try {
   $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "UPDATE Note
           SET noteAddress = '$noteAdd',
             textAddress = '$textAdd',
-            WHERE noteID = '$noteID'";
+            WHERE noteID = $noteID";
   $conn->exec($sql);  
 } catch (PDOException $e){
       myLOG($sql . PHP_EOL . $e->getMessage());
