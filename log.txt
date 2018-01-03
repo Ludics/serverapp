@@ -267,3 +267,11 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 2018-01-03 15:29:48$ Successfully.
 2018-01-03 15:29:57$ Username: ddls
 2018-01-03 15:29:57$ USer not exist
+2018-01-03 15:41:28$ Username: wsl
+2018-01-03 15:41:28$ Login success.
+2018-01-03 15:44:26$ Username: wsl
+2018-01-03 15:44:26$ Login success.
+2018-01-03 15:49:26$ Username: wsl
+2018-01-03 15:49:26$ USer not exist
+2018-01-03 15:49:42$ Username: wsl
+2018-01-03 15:49:42$ USer not exist
