@@ -255,3 +255,15 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 2018-01-03 15:18:49$ Login success.
 2018-01-03 15:21:29$ Username: wsl
 2018-01-03 15:21:29$ Login success.
+2018-01-03 15:27:23$ Username: wsl
+2018-01-03 15:27:23$ Login success.
+2018-01-03 15:28:20$ Username: ddl
+2018-01-03 15:28:20$ 0
+2018-01-03 15:28:20$ {"userID":"18","userName":"ddl"}
+2018-01-03 15:28:20$ Successfully.
+2018-01-03 15:29:48$ Username: ddls
+2018-01-03 15:29:48$ 0
+2018-01-03 15:29:48$ {"userID":"19","userName":"ddls"}
+2018-01-03 15:29:48$ Successfully.
+2018-01-03 15:29:57$ Username: ddls
+2018-01-03 15:29:57$ USer not exist
