@@ -1,11 +1,17 @@
 <?php
 include 'header.php';
+
+
 $result = file_get_contents('php://input');
-$obj = json_decode(json_encode($result));
-$userID = $obj->{'userID'};
-$note = $obj->{"note"};
-$text = $obj->{"text"};
-$bookname = $obj->{"bookname"};
+
+myLOG("Add note");
+myLOG($result);
+
+$obj = json_decode($result);
+$userID = $obj->userID;
+$note = $obj->note;
+$text = $obj->text;
+$bookname = $obj->bookname;
 
 $obj_re->noteID = 100;
 $obj_re->userID = $userID;
