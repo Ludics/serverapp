@@ -431,3 +431,7 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 2018-01-03 17:44:27$ ./content/note/1.txt
 2018-01-03 17:44:27$ ./content/text/0.txt
 2018-01-03 17:44:27$ Saving failed.
+2018-01-03 17:50:40$ 12aafe3fadfaewfa
+2018-01-03 17:50:40$ /var/www/html/app/content/note/1.txt
+2018-01-03 17:50:40$ /var/www/html/app/content/text/0.txt
+2018-01-03 17:50:40$ Saving failed.
