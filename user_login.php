@@ -9,7 +9,7 @@ $userName = $_POST['userName'];
 $userPassword = $_POST['userPassword'];
 myLOG("Username: " . $userName );
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM User WHERE userName = '$userName'";
  
