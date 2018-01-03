@@ -16,7 +16,7 @@ try {
   $sql = "SELECT * FROM Note ORDER BY createTime DESC LIMIT $times";
   $res = $conn->query($sql); 
   $row = $res->fetchALL();
-  $result = $row[$times-1];
+  $result = $row[0];
   //echo "success"; 
 } catch (PDOException $e){
       echo "fail";
