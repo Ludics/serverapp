@@ -412,3 +412,11 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 2018-01-03 17:11:34$ {"userID":"20","userName":"wsl"}
 2018-01-03 17:11:34$ Successfully.
 2018-01-03 17:11:34$ Login success.
+2018-01-03 17:13:23$ Username: wsl
+2018-01-03 17:13:23$ {"userID":"20","userName":"wsl"}
+2018-01-03 17:13:23$ Successfully.
+2018-01-03 17:13:23$ Login success.
+2018-01-03 17:14:37$ Username: wsl
+2018-01-03 17:14:37$ {"userID":"20","userName":"wsl"}
+2018-01-03 17:14:37$ Successfully.
+2018-01-03 17:14:37$ Login success.
