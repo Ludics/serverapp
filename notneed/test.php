@@ -1,4 +1,9 @@
 <?php
-echo 200;
-echo "用户名已存在";
+
+$dir = "../content/note/0.txt";
+$fp = fopen($dir, "w");
+fwrite($fp,"hahha");
+fclose($fp);
+
+
 ?>
