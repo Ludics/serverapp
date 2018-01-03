@@ -3,7 +3,7 @@ include 'header.php';
 $host = "localhost";
 $user = "root";
 $pass = "ludics";
-$dbname = "myDB";
+$dbname = "Notes";
 
 $userName = $_POST['userName'];
 $userPassword = $_POST['userPassword'];
@@ -18,7 +18,14 @@ try {
     $cnt = count($row);
     if ($cnt) {
         if ($userPassword == $row[0]['userPassword']){
-            echo "Login success.";
+            $userID = $row[0]['userID'];
+            $obj->userID = $userID;
+            $obj->userName = $userName;
+            $data = json_encode($obj);
+            //$data = addslashes($data);
+            echo $data;
+            myLOG($data);
+            myLOG("Successfully.");
             myLOG("Login success.");
         } else{
             echo "Password error.";
