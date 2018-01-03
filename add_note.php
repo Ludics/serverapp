@@ -25,24 +25,24 @@ myLOG($textAdd);
 
 //存笔记
 $fp = fopen($noteAdd,'w');
-flock($fp,LOCK_EX);
+//flock($fp,LOCK_EX);
 if(!$fp){
     myLOG("Saving failed.");
     exit;
 }
 fwrite($fp,$note);
-flock($fp,LOCK_UN);
+//flock($fp,LOCK_UN);
 fclose($fp);
 
 //存原文
 $fp=fopen($textAdd, 'w');
-flock($fp,LOCK_EX);
+//flock($fp,LOCK_EX);
 if(!$fp){
     myLOG("Saving failed.");
     exit;
 }
 fwrite($fp,$text);
-flock($fp,LOCK_UN);
+//flock($fp,LOCK_UN);
 fclose($fp);
 
 try {
