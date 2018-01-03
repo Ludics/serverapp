@@ -33,8 +33,8 @@ $text = file_get_contents($result["textAddress"]);
 $result["note"] = $note;
 $result["text"] = $text;
 
-unset($result["noteAddress"]);
-unset($result["textAddress"]);
+$result["noteAddress"] = "";
+$result["textAddress"] = "";
 
 echo json_encode($result);
 
